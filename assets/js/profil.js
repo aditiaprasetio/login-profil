@@ -1,26 +1,28 @@
 $(document).ready(function(){
+    // set input value with user data
     $('#fullname').val(user.fullname);
     $('#email').val(user.email);
     $('#address').val(user.address);
     $('#latlng').val(user.lat+','+user.lng);
     $('#phone').val(user.phone);
-
+    // when address change, convert address to location (lat & lng)
     $('#address').change(function(event){
         $('#loading-address').html('<span class="badge badge-warning">..search your location..</span>');
         addressToLoc();
     });
-
+    // token for authorization
     var token=$.base64.encode(user.id_user+':'+user.token);
-            
+    // when change password form submit
     $( "#password-form" ).submit(function( event ) {
         event.preventDefault();
+        // get form value
         var _oldPassword = $('#oldPassword').val();
         var _password = $('#password').val();
         var _repassword = $('#repassword').val();
         var oldPassword=enkripsi(_oldPassword);
         var password=enkripsi(_password);
         var repassword=enkripsi(_repassword);
-
+        // isValid
         if(oldPassword=='' || password=='' || repassword==''){
             $('#message-password').html('<div class="alert alert-danger">Semua isian password tidak boleh kosong.</div>');
         }else if(oldPassword==password){
@@ -58,19 +60,19 @@ $(document).ready(function(){
             });
         }
     });
-
+    // when profil form submitted 
     $( "#profil-form" ).submit(function( event ) {
         event.preventDefault();
+        // get value
         var fullname = $('#fullname').val();
         var email = $('#email').val();
         var phone = $('#phone').val();
         var address = $('#address').val();
         var latlng = $('#latlng').val();
-
+        // isValid
         if(fullname=='' || email==''){
             $('#message-profil').html('<div class="alert alert-danger">Full name dan email tidak boleh kosong.</div>');
         }else{
-            var token=$.base64.encode(user.id_user+':'+user.token);
             $.ajax({
                 type: "POST",
                 url: 'api/v1/user/profil',
