@@ -6,7 +6,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="LOGIN AND PROFIL PAGE">
         <meta name="author" content="Aditia Prasetio">
-        
+        <!-- GOOGLE SIGN IN -->
+		<meta name="google-signin-scope" content="profile email">
+		<meta name="google-signin-client_id" content="174489841847-q5flp5it1q7obtgpkeblv34hjbjuhgf1.apps.googleusercontent.com">
+		<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+		<script>
+		function init() {
+		  gapi.load('auth2', function() {
+			gapi.auth2.init();
+		  });
+		}
+		</script>
+		
         <link rel="icon" href="assets/img/favicon.ico" sizes="16x16" type="image/png">
 		<link rel="stylesheet" href="assets/css/main.css">
 		<link href="assets/fontawesome/css/all.css" rel="stylesheet">
