@@ -35,14 +35,14 @@ $(document).ready(function(){
 
     // SIGN IN FORM
     $('#signin-button').prop('disabled', true);
-    // when user type email 
+    // when user type email (enable button if email and password are not empty)
     $('#email').keyup(function(event){
         var email = $('#email').val();
         var pass = $('#password').val();
         if(email!='' && pass!='')  $('#signin-button').prop('disabled', false);
         else $('#signin-button').prop('disabled', true);
     });
-    // when user type password
+    // when user type password (enable button if email and password are not empty)
     $('#password').keyup(function(event){
         var email = $('#email').val();
         var pass = $('#password').val();
@@ -88,18 +88,21 @@ $(document).ready(function(){
     });
     // SIGN UP FORM
     $('#signup-button').prop('disabled', true);
+    // when user type email
     $('#emailReg').keyup(function(event){
         var email = $('#emailReg').val();
         var pass = $('#passwordReg').val();
         if(email!='' && pass!='')  $('#signup-button').prop('disabled', false);
         else $('#signup-button').prop('disabled', true);
     });
+    // when user type password
     $('#passwordReg').keyup(function(event){
         var email = $('#emailReg').val();
         var pass = $('#passwordReg').val();
         if(email!='' && pass!='')  $('#signup-button').prop('disabled', false);
         else $('#signup-button').prop('disabled', true);
     });
+    // when user submit form (id=register-form)
     $( "#register-form" ).submit(function( event ) {
         event.preventDefault();
         var fullname = $('#fullname').val();
