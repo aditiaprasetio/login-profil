@@ -85,8 +85,7 @@ function addressToLoc() {
             locToAddress(geocoder, map, infoWindow);
             $('#loading-address').html('');
         } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-            $('#loading-address').html('');
+			$('#loading-address').html('<div class="alert alert-danger">Geocode was not successful for the following reason: ' + status+'</div>');
         }
     });
 }
@@ -108,12 +107,10 @@ function locToAddress(geocoder, map, infowindow) {
           document.getElementById('address').value=results[0].formatted_address;
           $('#loading-address').html('');
         } else {
-            $('#loading-address').html('');
-          window.alert('No results found');
+			$('#loading-address').html('<div class="alert alert-danger">No results found</div>');
         }
       } else {
-        $('#loading-address').html('');
-        window.alert('Geocoder failed due to: ' + status);
+        $('#loading-address').html('<div class="alert alert-danger">Geocoder failed due to: ' + status+'</div>');
       }
     });
 }
