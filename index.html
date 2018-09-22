@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" data-framework="javascript">
+	<head>
+		<title>LOGPRO</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="LOGIN AND PROFIL PAGE">
+		<meta name="author" content="Aditia Prasetio">
+		<!-- GOOGLE SIGN IN -->
+		<meta name="google-signin-scope" content="profile email">
+		<meta name="google-signin-client_id" content="174489841847-433i0ehrg2rsrck0pjm6cfjs3faj4agp.apps.googleusercontent.com">
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+		<link rel="icon" href="assets/img/favicon.ico" sizes="16x16" type="image/png">
+		<link rel="stylesheet" href="assets/css/signin.css">
+		<link href="assets/fontawesome/css/all.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+		<script src="assets/bootstrap/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	</head>
+	<body class="text-center">
+		<!-- FORM LOGIN -->
+		<form class="form-signin" id="login-form" action="">
+			<!-- <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+			<h1 class="h3 mb-3 font-weight-normal"><i class="fa fa-sign-in-alt"></i> SIGN IN <b>LOGPRO</b></h1>
+			<label for="email" class="sr-only">Email address</label>
+			<input type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
+			
+			<label for="password" class="sr-only">Password</label>
+			<input type="password" id="password" class="form-control" placeholder="Password" required>
+			
+			<div id="message-form"></div>
+			<!-- <div class="checkbox mb-3">
+				<label>
+				<input type="checkbox" value="remember-me"> Remember me
+				</label>
+			</div> -->
+			<input id="signin-button" class="btn btn-lg btn-primary btn-block" type="submit" value="Sign In" />
+			<br/>
+			<div class="checkbox mb-3">
+				<a href="#" id="open-forgot">Forgot password?</a>
+			</div>
+			<br/>
+			<p>Don't have an account? <a href="#" id="open-register">Create new!</a></p>
+			<label>or</label>
+			<!-- <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div> -->
+			<div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true" data-theme="dark"></div>
+			<p class="mt-5 mb-3 text-muted">Copyright 2018 &copy; LOGPRO</p>
+		</form>
+		<!-- FORM REGISTER -->
+		<form class="form-signin" id="register-form" action="">
+			<!-- <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+			<h1 class="h3 mb-3 font-weight-normal"><i class="fa fa-user-alt"></i> SIGN UP <b>LOGPRO</b></h1>
+			<label for="fullname" class="sr-only">Full Name</label>
+			<input type="text" id="fullname" class="form-control" placeholder="Full name" required autofocus>
+			
+			<label for="emailReg" class="sr-only">Email address</label>
+			<input type="email" id="emailReg" class="form-control" aria-describedby="emailHelp" placeholder="Email address" required>
+			
+			<label for="passwordReg" class="sr-only">Password</label>
+			<input type="password" id="passwordReg" class="form-control" placeholder="Password" required>
+			
+			<div id="message-form-register"></div>
+			<!-- <div class="checkbox mb-3">
+				<label>
+				<input type="checkbox" value="remember-me"> Remember me
+				</label>
+			</div> -->
+			<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+			
+			<input id="signup-button" class="btn btn-lg btn-primary btn-block" type="submit" value="Sign Up" />
+			<br/>
+			<p>Have an account? <a href="#" id="open-login">Login now!</a></p>
+			<label>or</label>
+			<!-- <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div> -->
+			<div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true" data-theme="dark"></div>
+			<p class="mt-5 mb-3 text-muted">Copyright 2018 &copy; LOGPRO</p>
+		</form>
+		
+		<!-- FORM REGISTER -->
+		<form class="form-signin" id="forgot-form" action="">
+			<!-- <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+			<h1 class="h3 mb-3 font-weight-normal"><i class="fa fa-lock"></i> FORGOT PASSWORD? <b>LOGPRO</b></h1>
+			<label for="emailForgot" class="sr-only">Email address</label>
+			<input type="email" id="emailForgot" class="form-control" aria-describedby="emailHelp" placeholder="Email address" required>
+			
+			<div id="message-form-forgot"></div>
+			<!-- <div class="checkbox mb-3">
+				<label>
+				<input type="checkbox" value="remember-me"> Remember me
+				</label>
+			</div> -->
+			<input id="forgot-button" class="btn btn-lg btn-primary btn-block" type="submit" value="Reset Password" />
+			<br/>
+			<p>Have an account? <a href="#" id="open-login1">Login now!</a></p>
+			<p>Don't have an account? <a href="#" id="open-register1">Create new account!</a></p>
+			<p class="mt-5 mb-3 text-muted">Copyright 2018 &copy; LOGPRO</p>
+		</form>
+		<script src="assets/js/jquery-3.3.1.min.js"></script>
+		<script src="assets/js/sha1.js"></script>
+		<script src="assets/js/index.js"></script>
+		<script src="assets/js/login.js"></script>
+	</body>
+</html>

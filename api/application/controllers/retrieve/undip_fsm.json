@@ -1,0 +1,81 @@
+{
+	"device_sensors": [
+		{
+			"user_sensor_uuid": "49a7e35491aa4601a233bb5c81effsm1",
+			"user_sensor_name": "FSM Undip",
+			"sensor_threshold": 0,
+			"threshold_enabled": false,
+			"threshold_direction": "1",
+			"master_sensor_name": "Temperature",
+			"latest_value_added": null,
+			"latest_value": null,
+			"unit_name": "Celsius",
+			"unit_symbol": "°C",
+			"sensor_model": "DHT 22"
+		},
+		{
+			"user_sensor_uuid": "49a7e35491aa4601a233bb5c81effsm2",
+			"user_sensor_name": "FSM Undip",
+			"sensor_threshold": 0,
+			"threshold_enabled": false,
+			"threshold_direction": "1",
+			"master_sensor_name": "Humidity",
+			"latest_value_added": null,
+			"latest_value": null,
+			"unit_name": "Percent",
+			"unit_symbol": "%",
+			"sensor_model": "DHT 22"
+		},
+		{
+			"user_sensor_uuid": "49a7e35491aa4601a233bb5c81effsm3",
+			"user_sensor_name": "FSM Undip",
+			"sensor_threshold": 0,
+			"threshold_enabled": false,
+			"threshold_direction": "1",
+			"master_sensor_name": "Atmospheric Pressure",
+			"latest_value_added": null,
+			"latest_value": null,
+			"unit_name": "Barometric Pressure",
+			"unit_symbol": "bar",
+			"sensor_model": "DHT 22"
+		},
+		{
+			"user_sensor_uuid": "49a7e35491aa4601a233bb5c81effsm4",
+			"user_sensor_name": "FSM Undip",
+			"sensor_threshold": 0,
+			"threshold_enabled": false,
+			"threshold_direction": "1",
+			"master_sensor_name": "Wind",
+			"latest_value_added": null,
+			"latest_value": null,
+			"unit_name": "km/jam",
+			"unit_symbol": "km/jam",
+			"sensor_model": "DHT 22"
+		},
+		{
+			"user_sensor_uuid": "49a7e35491aa4601a233bb5c81effsm5",
+			"user_sensor_name": "FSM Undip",
+			"sensor_threshold": 0,
+			"threshold_enabled": false,
+			"threshold_direction": "1",
+			"master_sensor_name": "Precipitation",
+			"latest_value_added": null,
+			"latest_value": null,
+			"unit_name": "mm",
+			"unit_symbol": "mm",
+			"sensor_model": "DHT 22"
+		}
+	],
+	"device_uuid": "e47fc0d1ac2140f6ab4e38c63aa1efsm",
+	"position": {
+		"lat": -7.048525,
+		"lng": 110.440836
+	},
+	"location_text": "Fakultas Sains dan Matematika Universitas Diponegoro, Jl. Prof. Soedarto SH Tembalang, Kota Semarang Jawa Tengah 50275, Indonesia",
+	"read_key": "670b3e5999db4590946e6010b7153783",
+	"write_key": "f987e6f3810849c68d2360af58045f4b",
+	"device_name": "Fakultas Sains dan Matematika",
+	"time_added": 1527055615.753211,
+	"quick_status": "All good",
+	"over_threshold": 0
+}

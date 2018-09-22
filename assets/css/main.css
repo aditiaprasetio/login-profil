@@ -1,0 +1,117 @@
+.container{
+  font-size:0.9rem;
+}
+.mark-as-read{
+  background-color:#f8f9fa;
+  color:#8a8a8a;
+}
+.mark-as-unread{
+  background-color: #fff; /*f8f9fa*/
+  color:#444; 
+  font-weight:bold;
+}
+.table-hover tbody tr:hover{
+  box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+  z-index: 1;
+}
+
+/* checkbox */
+.cbx {
+  margin: auto;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.cbx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+.cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 1px solid #9098A9;
+  transition: all 0.2s ease;
+}
+.cbx span:first-child svg {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+.cbx span:first-child:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #506EEC;
+  display: block;
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+}
+.cbx span:last-child {
+  padding-left: 8px;
+}
+.cbx:hover span:first-child {
+  border-color: #506EEC;
+}
+
+.inp-cbx:checked + .cbx span:first-child {
+  background: #506EEC;
+  border-color: #506EEC;
+  animation: wave 0.4s ease;
+}
+.inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+.inp-cbx:checked + .cbx span:first-child:before {
+  transform: scale(3.5);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+@keyframes wave {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+a.nav-link{
+  color:grey;
+}
+a.nav-link.active{
+  border-bottom:solid;
+}
+a.nav-link.active.tab-utama{
+  border-bottom:solid;
+  border-bottom-color:#dc3545;
+  color:#dc3545;
+}
+a.nav-link.active.tab-sosial{
+  border-bottom:solid;
+  border-bottom-color:#007bff;
+  color:#007bff;
+}
+a.nav-link.active.tab-promosi{
+  border-bottom:solid;
+  border-bottom-color:#28a745;
+  color:#28a745;
+}
+span.snippet{
+  font-size:0.8rem;
+  color:#b4b4b5;
+  font-weight: normal;
+}
