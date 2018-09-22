@@ -3,6 +3,7 @@ if(user!=null){
 }
 
 $(document).ready(function(){
+    // show and hide form based on what is needed
     $('#register-form').hide();
     $('#forgot-form').hide();
     
@@ -34,18 +35,21 @@ $(document).ready(function(){
 
     // SIGN IN FORM
     $('#signin-button').prop('disabled', true);
+    // when user type email 
     $('#email').keyup(function(event){
         var email = $('#email').val();
         var pass = $('#password').val();
         if(email!='' && pass!='')  $('#signin-button').prop('disabled', false);
         else $('#signin-button').prop('disabled', true);
     });
+    // when user type password
     $('#password').keyup(function(event){
         var email = $('#email').val();
         var pass = $('#password').val();
         if(email!='' && pass!='')  $('#signin-button').prop('disabled', false);
         else $('#signin-button').prop('disabled', true);
     });
+    // when user submit form (id=login-form)
     $( "#login-form" ).submit(function( event ) {
         event.preventDefault();
         var email = $('#email').val();

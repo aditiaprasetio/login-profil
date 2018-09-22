@@ -3,6 +3,7 @@ $(document).ready(function(){
     let urlParams = new URLSearchParams(window.location.search);
     var reset_token = urlParams.get('reset_token');
 
+    // check (isvalid?) reset token
     $.ajax({
         type: "POST",
         url: 'api/v1/user/changepassword',
@@ -29,7 +30,7 @@ $(document).ready(function(){
         }
     });
 
-
+    // when form (id=forgot-form) submitted
     $( "#forgot-form" ).submit(function( event ) {
         event.preventDefault();
         var _password = $('#password').val();
